@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Профиль - WorkTap</title>
+</head>
+<body>
+
+<!-- Хедер -->
+<header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+        <a href="/" class="flex items-center gap-2">
+            <img src="./img/icons/icon.svg" alt="WorkTap Logo" class="w-44">
+        </a>
+        <nav class="hidden md:flex space-x-6">
+            <a href="./биржа.html" class="text-gray-800 hover:text-green-600 font-medium">Биржа</a>
+            <a href="#" class="text-gray-800 hover:text-green-600 font-medium">Ворки</a>
+            <a href="#" class="text-gray-800 hover:text-green-600 font-medium">Конкурсы</a>
+            <a href="#" class="text-gray-800 hover:text-green-600 font-medium">Создать заказ</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button class="text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M5.99962 14.4L1.65082 10.8C0.830016 10.1436 1.19002 8.82359 2.23162 8.67479L8.39962 8.39999L11.0336 1.79639C11.1233 1.61698 11.2612 1.4661 11.4318 1.36065C11.6024 1.2552 11.799 1.19934 11.9996 1.19934C12.2002 1.19934 12.3968 1.2552 12.5674 1.36065C12.738 1.4661 12.8759 1.61698 12.9656 1.79639L15.5996 8.39999L21.7676 8.67479C22.8092 8.82359 23.1692 10.1436 22.3484 10.8L17.9996 14.4L19.1864 21.4284C19.2174 21.6452 19.1885 21.8663 19.1028 22.0678C19.0171 22.2693 18.8779 22.4435 18.7003 22.5716C18.5226 22.6996 18.3134 22.7767 18.0951 22.7943C17.8768 22.8119 17.6579 22.7695 17.462 22.6716L11.9996 19.2L6.53722 22.6704C6.34134 22.7683 6.12241 22.8107 5.90415 22.7931C5.68588 22.7755 5.4766 22.6984 5.29897 22.5704C5.12134 22.4423 4.98214 22.2681 4.89645 22.0666C4.81075 21.8651 4.78183 21.644 4.81282 21.4272L5.99962 14.4Z" fill="#B0AAD0"/>
+                </svg>
+            </button>
+            <button class="text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12.0004 0C12.3186 0 12.6238 0.126428 12.8489 0.351472C13.0739 0.576516 13.2004 0.88174 13.2004 1.2V3.6384L13.1992 3.6636L13.1968 3.6996C14.8751 3.9829 16.3989 4.85145 17.4979 6.1512C18.5969 7.45095 19.2 9.09791 19.2004 10.8C19.2004 14.5116 19.9504 15.9744 21.1192 18.252L21.16 18.3336C21.364 18.7296 21.076 19.2 20.6296 19.2H3.37117C3.26919 19.2001 3.16889 19.174 3.0799 19.1242C2.99091 19.0744 2.91621 19.0025 2.86296 18.9156C2.80971 18.8286 2.77971 18.7294 2.77582 18.6275C2.77194 18.5256 2.7943 18.4244 2.84077 18.3336L2.88157 18.252C4.05037 15.9744 4.80037 14.5116 4.80037 10.8C4.80045 9.0977 5.40347 7.45046 6.50247 6.15046C7.60148 4.85046 9.12542 3.98174 10.804 3.6984L10.8016 3.6504C10.8007 3.63361 10.8003 3.61681 10.8004 3.6V1.2C10.8004 0.88174 10.9268 0.576516 11.1518 0.351472C11.3769 0.126428 11.6821 0 12.0004 0V0ZM14.4004 21.6C14.4004 22.2365 14.1475 22.847 13.6974 23.2971C13.2473 23.7471 12.6369 24 12.0004 24C11.3638 24 10.7534 23.7471 10.3033 23.2971C9.85322 22.847 9.60037 22.2365 9.60037 21.6H14.4004Z" fill="#B0AAD0"/>
+                </svg>
+            </button>
+            <button class="text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_2614_20121)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0C5.3832 0 0 5.3832 0 12C0 14.0736 0.54 16.104 1.5648 17.9088L0.1212 21.558C-0.4284 23.0088 0.9924 24.4296 2.4432 23.8788L6.0912 22.434C7.89142 23.4602 9.92784 23.9999 12 24C18.6168 24 24 18.6168 24 12C24 5.3832 18.6168 0 12 0ZM6.3516 11.1516C6.46278 11.0398 6.59498 10.951 6.74058 10.8905C6.88618 10.8299 7.04231 10.7988 7.2 10.7988C7.35769 10.7988 7.51382 10.8299 7.65942 10.8905C7.80502 10.951 7.93722 11.0398 8.0484 11.1516C8.16022 11.2628 8.24896 11.395 8.30951 11.5406C8.37007 11.6862 8.40124 11.8423 8.40124 12C8.40124 12.1577 8.37007 12.3138 8.30951 12.4594C8.24896 12.605 8.16022 12.7372 8.0484 12.8484C7.93722 12.9602 7.80502 13.049 7.65942 13.1095C7.51382 13.1701 7.35769 13.2012 7.2 13.2012C7.04231 13.2012 6.88618 13.1701 6.74058 13.1095C6.59498 13.049 6.46278 12.9602 6.3516 12.8484C6.23978 12.7372 6.15104 12.605 6.09049 12.4594C6.02993 12.3138 5.99876 12.1577 5.99876 12C5.99876 11.8423 6.02993 11.6862 6.09049 11.5406C6.15104 11.395 6.23978 11.2628 6.3516 11.1516ZM11.1516 11.1516C11.2628 11.0398 11.395 10.951 11.5406 10.8905C11.6862 10.8299 11.8423 10.7988 12 10.7988C12.1577 10.7988 12.3138 10.8299 12.4594 10.8905C12.605 10.951 12.7372 11.0398 12.8484 11.1516C12.9602 11.2628 13.049 11.395 13.1095 11.5406C13.1701 11.6862 13.2012 11.8423 13.2012 12C13.2012 12.1577 13.1701 12.3138 13.1095 12.4594C13.049 12.605 12.9602 12.7372 12.8484 12.8484C12.6229 13.0725 12.3179 13.1983 12 13.1983C11.6821 13.1983 11.3771 13.0725 11.1516 12.8484C10.9275 12.6229 10.8017 12.3179 10.8017 12C10.8017 11.6821 10.9275 11.3771 11.1516 11.1516ZM16.8 10.8C16.6423 10.7995 16.486 10.8302 16.3402 10.8904C16.1944 10.9505 16.0619 11.0389 15.9504 11.1504C15.8389 11.2619 15.7505 11.3944 15.6904 11.5402C15.6302 11.686 15.5995 11.8423 15.6 12C15.5995 12.1577 15.6302 12.314 15.6904 12.4598C15.7505 12.6056 15.8389 12.7381 15.9504 12.8496C16.0619 12.9611 16.1944 13.0495 16.3402 13.1096C16.486 13.1698 16.6423 13.2005 16.8 13.2C16.9577 13.2005 17.114 13.1698 17.2598 13.1096C17.4056 13.0495 17.5381 12.9611 17.6496 12.8496C17.7611 12.7381 17.8495 12.6056 17.9096 12.4598C17.9698 12.314 18.0005 12.1577 18 12C18.0005 11.8423 17.9698 11.686 17.9096 11.5402C17.8495 11.3944 17.7611 11.2619 17.6496 11.1504C17.5381 11.0389 17.4056 10.9505 17.2598 10.8904C17.114 10.8302 16.9577 10.7995 16.8 10.8Z" fill="#B0AAD0"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2614_20121">
+                                <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </svg>
+            </button>
+            <div class="relative">
+                <a href="/profile.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                    <button class="flex items-center gap-2  text-sm font-medium">
+                        <span>Ернар Ибрагимов</span>
+                        <img src="./img/icons/avatar.svg" alt="avatar" class="h-14 w-14">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 9L12 17L20 9" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Профиль -->
+<section class="py-12 px-4 bg-[#F6FAFD]">
+    <div class="container mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-8 mb-12">
+            <div class="lg:w-1/2">
+                <p class="text-[#FBA457] font-semibold mb-2 text-[24px]">Дизайнер</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-black mb-4"><span class="text-[#1DBF73]">Ернар</span> Ибрагимов</h1>
+                <p class="text-[#000] mb-6 text-[14px] max-w-[530px]">
+                    Работаю дизайнером с 1999 года.<br>
+                    Был опыт в газетах, журналах, типографиях, рекламных агентствах, издательских домах... Порядка 8 лет, занимаюсь логотипами и фирменными стилями.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-6 max-w-[500px]">
+                    <button class="px-3 py-1 bg-transparent border border-[#F2F0FE] hover:bg-blue-100 rounded-full text-sm cursor-pointer">Figma</button>
+                    <button class="px-3 py-1 bg-transparent border border-[#F2F0FE] hover:bg-blue-100 rounded-full text-sm cursor-pointer">Adobe photoshop</button>
+                    <button class="px-3 py-1 bg-transparent border border-[#F2F0FE] hover:bg-blue-100 rounded-full text-sm cursor-pointer">Adobe illustrator</button>
+                    <button class="px-3 py-1 bg-transparent border border-[#F2F0FE] hover:bg-blue-100 rounded-full text-sm cursor-pointer">Corel draw</button>
+                    <button class="px-3 py-1 bg-transparent border border-[#F2F0FE] hover:bg-blue-100 rounded-full text-sm cursor-pointer">Adobe After Effects</button>
+                    <button class="px-3 py-1 bg-transparent border border-[#F2F0FE] hover:bg-blue-100 rounded-full text-sm cursor-pointer">HTML/CSS</button>
+                </div>
+                <div class="relative max-w-[500px]">
+                    <div class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition cursor-pointer" id="showDetailsBtn">
+                        <button class="flex justify-between items-center w-full text-gray-700 font-medium">
+                            <span id="toggleText">Показать подробную информацию</span>
+                            <svg id="toggleIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="transition-transform duration-300">
+                                <path d="M10 12L6 8L7.41421 6.58579L10 9.17157L12.5858 6.58579L14 8L10 12Z" fill="#222222"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div id="profileDetails" class="absolute top-full left-0 w-full bg-white p-6 rounded-lg shadow-lg mt-2 hidden z-50">
+
+                        <!-- Список с выравниванием: название слева, описание справа -->
+                        <div class="space-y-3 text-gray-700 text-sm">
+                            <div class="flex gap-38 items-start">
+                                <span class="font-semibold flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <g clip-path="url(#clip0_618_4775)">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.07 6C4.02464 4.34995 5.53549 3.09363 7.332 2.456C6.57329 3.54044 5.98732 4.73598 5.595 6H3.07ZM2.252 8C2.08417 8.6534 1.9995 9.32539 2 10C2 10.69 2.088 11.36 2.252 12H5.142C5.04654 11.3376 4.99908 10.6692 5 10C5 9.296 5.051 8.629 5.143 8H2.252ZM7.168 8C7.06 8.62 7 9.286 7 10C7 10.713 7.061 11.38 7.168 12H12.832C12.939 11.38 13 10.713 13 10C13 9.286 12.939 8.62 12.832 8H7.168ZM14.858 8C14.948 8.629 15 9.296 15 10C15 10.704 14.949 11.371 14.857 12H17.748C17.913 11.36 18 10.69 18 10C18 9.31 17.913 8.64 17.748 8H14.858ZM16.93 6H14.405C14.0126 4.736 13.4267 3.54047 12.668 2.456C14.4645 3.09363 15.9754 4.34995 16.93 6ZM12.292 6H7.708C8.032 5.135 8.433 4.404 8.832 3.805C9.254 3.172 9.674 2.688 10 2.353C10.326 2.688 10.746 3.173 11.168 3.805C11.568 4.404 11.968 5.135 12.292 6ZM11.168 16.195C11.568 15.596 11.968 14.865 12.292 14H7.708C8.032 14.865 8.433 15.596 8.832 16.195C9.254 16.828 9.674 17.312 10 17.647C10.326 17.312 10.746 16.827 11.168 16.195ZM3.07 14H5.595C5.98732 15.264 6.57329 16.4596 7.332 17.544C5.53549 16.9064 4.02464 15.65 3.07 14ZM12.832 17.305C12.7782 17.3856 12.7236 17.4656 12.668 17.545C14.4647 16.9071 15.9755 15.6504 16.93 14H14.405C14.0416 15.1713 13.5119 16.2843 12.832 17.305ZM20 10C20 15.52 15.528 19.994 10.01 20H9.988C4.47 19.994 0 15.519 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10Z" fill="#656084"/>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_618_4775">
+                                            <rect width="20" height="20" fill="white"/>
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                    Страна:
+                                </span>
+                                <span class="text-right">Казахстан, Алматы</span>
+                            </div>
+                            <div class="flex gap-35 items-start">
+                                <span class="font-semibold flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <g clip-path="url(#clip0_618_4780)">
+    <path d="M10 20C4.486 20 0 15.514 0 10C0 4.486 4.486 0 10 0C15.514 0 20 4.486 20 10C20 15.514 15.514 20 10 20ZM11 5C11 4.73478 10.8946 4.48043 10.7071 4.29289C10.5196 4.10536 10.2652 4 10 4C9.73478 4 9.48043 4.10536 9.29289 4.29289C9.10536 4.48043 9 4.73478 9 5V10C9.00006 10.2652 9.10545 10.5195 9.293 10.707L12.293 13.707C12.4816 13.8892 12.7342 13.99 12.9964 13.9877C13.2586 13.9854 13.5094 13.8802 13.6948 13.6948C13.8802 13.5094 13.9854 13.2586 13.9877 12.9964C13.99 12.7342 13.8892 12.4816 13.707 12.293L11 9.586V5Z" fill="#656084"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_618_4780">
+      <rect width="20" height="20" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
+                                    На сайте:
+                                </span>
+                                <span class="text-left">3 года</span>
+                            </div>
+                            <div class="flex gap-27 items-start">
+                                <span class="font-semibold flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.99997H20C20 5.39597 19.632 4.85297 19.072 4.62897L10.557 1.22297C10.1994 1.07997 9.80057 1.07997 9.443 1.22297L0.928 4.62897C0.368 4.85297 0 5.39597 0 5.99997ZM0 7.99997V8.99997C0 9.26519 0.105357 9.51954 0.292893 9.70708C0.48043 9.89462 0.734784 9.99997 1 9.99997V17C0.734784 17 0.48043 17.1053 0.292893 17.2929C0.105357 17.4804 0 17.7348 0 18C0 18.2652 0.105357 18.5195 0.292893 18.7071C0.48043 18.8946 0.734784 19 1 19H19C19.2652 19 19.5196 18.8946 19.7071 18.7071C19.8946 18.5195 20 18.2652 20 18C20 17.7348 19.8946 17.4804 19.7071 17.2929C19.5196 17.1053 19.2652 17 19 17V9.99997C19.2652 9.99997 19.5196 9.89462 19.7071 9.70708C19.8946 9.51954 20 9.26519 20 8.99997V7.99997H0ZM4 9.99997H6V17H4V9.99997ZM11 9.99997H9V17H11V9.99997ZM14 9.99997H16V17H14V9.99997Z" fill="#656084"/>
+</svg>
+                                    Образование:
+                                </span>
+                                <span class="text-left">
+                                    <ol class="list-decimal list-inside">
+                                        <li>Казахстан, КазНУ, Бакалавр</li>
+                                        <li>Казахстан, КБТУ, Магистратура</li>
+                                    </ol>
+                                </span>
+                            </div>
+                            <div class="flex gap-38 items-start">
+                                <span class="font-semibold">Знание языков:</span>
+                                <span class="text-left">
+                                    <ol class="list-decimal list-inside">
+                                        <li>Казахский</li>
+                                        <li>Русский</li>
+                                    </ol>
+                                </span>
+                            </div>
+                            <div class="flex gap-38 items-start">
+                                <span class="font-semibold">Сертификаты:</span>
+                                <span class="text-right">
+                                    <ol class="list-decimal list-inside">
+                                        <li>Сертификат 1, 2020 года</li>
+                                        <li>Сертификат 2, 2021 года</li>
+                                    </ol>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2 relative flex justify-center">
+                <div class="relative">
+                    <img src="./img/hero2.png" alt="Ернар Ибрагимов" class="w-[420px] h-[420px] rounded-full object-cover border-4 border-white shadow-lg">
+                    <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-green-600 font-medium text-sm flex items-center gap-1">
+                        <div class="w-3 h-3 bg-green-600 rounded-full"></div>
+                        В сети
+                    </div>
+
+                    <div class="absolute top-4 right-4 bg-white p-2 rounded-full shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16Z" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12Z" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14 10H16" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 10H6" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 16V18" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 2V4" stroke="#222222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="absolute top-2 left-1/2 transform -translate-x-1/2">
+                       <img src="./img/rating.png" alt="rating">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Мои ворки -->
+<section class="py-12 px-4">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-6">Мой ворки</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Кнопка "Создать ворк" -->
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition cursor-pointer flex flex-col items-center justify-center gap-4">
+                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 6V18M6 12H18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-green-600">Создать ворк</h3>
+            </div>
+            <!-- Карточки проектов -->
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
+                <img src="./img/work1.jpg" alt="Дизайн сайта" class="w-full h-48 object-cover rounded-lg mb-3">
+                <h4 class="font-semibold text-gray-900 mb-1">Дизайн сайта</h4>
+                <p class="text-green-500 font-medium">50 000 тенге</p>
+            </div>
+        </div>
+        <div class="flex justify-center mt-8">
+            <button class="px-6 py-3 border border-green-500 text-green-500 rounded-full font-medium hover:bg-green-50 transition">Загрузить еще</button>
+        </div>
+    </div>
+</section>
+
+<!-- Отзывы -->
+<section class="py-12 px-4 bg-[#F6FAFD]">
+    <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-6">Отзывы</h2>
+        <!-- Табы -->
+        <div class="flex gap-6 mb-6">
+            <button class="text-green-600 font-medium border-b-2 border-green-600">Положительные (65)</button>
+            <button class="text-gray-600 font-medium">Отрицательные (10)</button>
+        </div>
+        <!-- Карточки отзывов -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-5 rounded-xl shadow">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Никита Евреев</h3>
+                        <div class="flex gap-1 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#B0AAD0"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                </p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Никита Евреев</h3>
+                        <div class="flex gap-1 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#B0AAD0"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                </p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Никита Евреев</h3>
+                        <div class="flex gap-1 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#B0AAD0"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                </p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Никита Евреев</h3>
+                        <div class="flex gap-1 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#B0AAD0"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                </p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Никита Евреев</h3>
+                        <div class="flex gap-1 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#B0AAD0"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                </p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 bg-gray-300 rounded-full"></div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900">Никита Евреев</h3>
+                        <div class="flex gap-1 mt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#FFA500"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M9.99992 14.5L11.2058 16.1531L13.0003 16.2738L11.7945 17.9269L11.2058 19.5L9.99992 17.8469L8.79407 19.5L8.2054 17.9269L6.99954 16.2738L8.79407 16.1531L9.99992 14.5Z" fill="#B0AAD0"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-600">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                </p>
+            </div>
+        </div>
+        <div class="flex justify-center mt-8">
+            <button class="px-6 py-3 border border-green-500 text-green-500 rounded-full font-medium hover:bg-green-50 transition">Загрузить еще</button>
+        </div>
+    </div>
+</section>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
