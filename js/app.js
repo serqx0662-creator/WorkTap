@@ -9,3 +9,13 @@ btn.addEventListener("click", () => {
     toggleText.textContent = isHidden ? "Скрыть подробную информацию" : "Показать подробную информацию";
     toggleIcon.style.transform = isHidden ? "rotate(180deg)" : "rotate(0deg)";
 });
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('shadow-md');
+        header.querySelector('.container').classList.replace('py-3', 'py-2');
+    } else {
+        header.classList.remove('shadow-md');
+        header.querySelector('.container').classList.replace('py-2', 'py-3');
+    }
+});
