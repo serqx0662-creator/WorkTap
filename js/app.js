@@ -2,6 +2,8 @@ const btn = document.getElementById("showDetailsBtn");
 const details = document.getElementById("profileDetails");
 const toggleText = document.getElementById("toggleText");
 const toggleIcon = document.getElementById("toggleIcon");
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
 
 btn.addEventListener("click", () => {
     const isHidden = details.classList.contains("hidden");
@@ -18,4 +20,6 @@ window.addEventListener('scroll', () => {
         header.classList.remove('shadow-md');
         header.querySelector('.container').classList.replace('py-2', 'py-3');
     }
-});
+})
+
+menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
